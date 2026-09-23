@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#f2efe7">
+  <title>Was bleibt? — Salonformat</title>
+  <link rel="preload" href="assets/DellaRespira-Regular.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="assets/was-bleibt/harvesters-met.jpg" as="image">
+  <link rel="stylesheet" href="memory.css?v=23">
+</head>
+<body>
+<main class="experience" data-scene="prologue" data-work="tower">
+  <header class="masthead">
+    <button class="wordmark" data-home>SALONFORMAT</button>
+    <p data-location>Was bleibt?</p>
+    <div class="masthead-actions"><nav class="languages" aria-label="Sprache wählen"><span class="language-label">Sprache</span><button class="active" data-lang="de">DE</button><button data-lang="en">EN</button><button data-lang="fr">FR</button></nav><button class="sound" data-sound aria-pressed="false">KLANG <i aria-hidden="true"></i></button></div>
+  </header>
+
+  <section class="scene prologue" aria-labelledby="prologue-title">
+    <div class="prologue-visual" aria-hidden="true">
+      <img class="memory-trace" src="assets/plates/provenance-pigment.png" alt="">
+      <i></i><i></i><i></i>
+    </div>
+    <article class="prologue-copy">
+      <h1 id="prologue-title">Was<br><em>bleibt?</em></h1>
+      <p class="prologue-eye">Eine digitale Learning Experience von <a href="https://salonformat.com" target="_blank" rel="noopener noreferrer">Salonformat</a></p>
+      <div class="prologue-intro">
+        <p class="prologue-lead">Schau dir ein Werk 30 Sekunden lang an und zeichne danach aus dem Gedächtnis, was du gesehen hast.</p>
+        <p class="prologue-learning">Anschließend kommt das Original zurück und du kannst deine Zeichnung darüberlegen. So siehst du, welche Details dir aufgefallen sind und welche du übersehen hast. Zeichnen können musst du dafür nicht – es geht ums genaue Hinschauen.</p>
+      </div>
+      <button data-enter><span>Experience beginnen</span><i>→</i></button>
+      <small>Etwa 4 Minuten</small>
+    </article>
+  </section>
+
+  <section class="scene index" aria-labelledby="index-title">
+    <div class="index-intro">
+      <h1 id="index-title">Was<br><em>bleibt?</em></h1>
+      <p>Du siehst ein Kunstwerk oder Objekt für 30 Sekunden. Dann verschwindet es.</p>
+      <span>Wähle ein Werk:</span>
+      <div class="index-register" aria-label="Werk auswählen">
+        <button data-jump-select="tower">Die Kornernte <i>→</i></button>
+        <button data-jump-select="shield">Gefäß mit Gesichtshals <i>→</i></button>
+        <button data-jump-select="relief">Maske <i>→</i></button>
+      </div>
+    </div>
+    <div class="work-list" data-work-list>
+      <article class="work-entry tower-entry">
+        <div class="entry-image"><img src="assets/was-bleibt/harvesters-met.jpg" alt="Pieter Bruegel, Die Kornernte"></div>
+        <div class="entry-copy"><small>GEMÄLDE · THE MET · OPEN ACCESS</small><h2>Die<br>Kornernte</h2><p>Was bleibt von einer Landschaft, in der überall etwas geschieht?</p><button data-select="tower">30 Sekunden hinsehen <i>→</i></button></div>
+      </article>
+      <article class="work-entry shield-entry">
+        <div class="entry-image object-image"><img src="assets/was-bleibt/moche-vessel-met.jpg" alt="Moche-Gefäß mit Gesichtshals"></div>
+        <div class="entry-copy"><small>GEFÄSS · THE MET · OPEN ACCESS</small><h2>Gefäß mit<br>Gesichtshals</h2><p>Bleibt zuerst das Gesicht im Gedächtnis oder die Form des Gefäßes?</p><button data-select="shield">30 Sekunden hinsehen <i>→</i></button></div>
+      </article>
+      <article class="work-entry relief-entry">
+        <div class="entry-image object-image"><img src="assets/was-bleibt/mask-met.jpg" alt="Maske aus Papua-Neuguinea"></div>
+        <div class="entry-copy"><small>MASKE · THE MET · OPEN ACCESS</small><h2>Maske</h2><p>Welche Linie, Öffnung oder Form erkennst du später wieder?</p><button data-select="relief">30 Sekunden hinsehen <i>→</i></button></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="scene observe" aria-label="Das ausgewählte Werk betrachten">
+    <figure class="art-stage" data-art-stage><img data-art-image alt=""><figcaption><b data-art-title></b><span data-art-meta></span></figcaption></figure>
+    <div class="watch"><p>Sieh hin.</p><strong data-time>30</strong><span>Sekunden</span></div>
+    <button class="hide-art" data-hide>Das Bild jetzt ausblenden <span>→</span></button>
+  </section>
+
+  <section class="scene recall" aria-labelledby="recall-question">
+    <div class="absence">
+      <canvas data-memory aria-label="Leere Zeichenfläche für deine Erinnerung"></canvas>
+      <div class="drawing-tools" aria-label="Zeichenwerkzeuge">
+        <button class="active tool-ink" data-tool="ink"><i></i>Tusche</button>
+        <button class="tool-brush" data-tool="brush"><i></i>Pinsel</button>
+        <button class="tool-pastel" data-tool="pastel"><i></i>Ölkreide</button>
+        <button class="tool-pencil" data-tool="pencil"><i></i>Buntstift</button>
+        <label>Farbe <input data-draw-color type="color" value="#29231e" aria-label="Zeichenfarbe wählen"></label>
+        <button data-clear>Neu anfangen</button>
+      </div>
+    </div>
+    <div class="recall-copy">
+      <div class="draw-instruction" data-draw-instruction>
+        <p class="recall-step">Deine Erinnerung</p>
+        <h2 id="recall-question">Zeichne, was dir geblieben ist.</h2>
+        <p class="question-note">Es muss nicht schön oder vollständig sein. Eine Form, eine Bewegung oder ein Detail reicht.</p>
+        <button class="drawing-done" data-drawing-done disabled>Meine Zeichnung ist fertig <i>→</i></button>
+      </div>
+    </div>
+  </section>
+
+  <section class="scene compare" aria-labelledby="compare-title">
+    <div class="comparison-stage"><img data-compare-image alt=""><canvas data-comparison-memory></canvas></div>
+    <div class="compare-copy"><h2 id="compare-title">Schau noch einmal.</h2><p>Zieh den Regler ganz nach rechts. So kommt das wirkliche Bild langsam zurück.</p><label><span>ERINNERUNG</span><input data-compare type="range" min="0" max="100" value="8" aria-label="Vom Erinnerungsbild zum wirklichen Bild"><span>WERK</span></label><button data-to-discover disabled>Weiter zu den Details <i>→</i></button></div>
+  </section>
+
+  <section class="scene discover" aria-labelledby="discover-title">
+    <figure class="discovery-art" data-discovery-art><img data-discover-image alt=""><button class="hotspot h-one" data-detail="0"><span>1</span></button><button class="hotspot h-two" data-detail="1"><span>2</span></button><button class="hotspot h-three" data-detail="2"><span>3</span></button></figure>
+    <aside class="discovery-copy"><p>Jetzt geht es um die Details.</p><h2 id="discover-title">Sieh dir die drei markierten Stellen an.</h2><div class="detail-text" data-detail-text aria-live="polite"><p>Zu jeder Markierung gibt es eine kurze Erklärung.</p></div><div class="detail-count" data-detail-count>0 von 3 angesehen</div><button data-to-protocol disabled>Mein Blickprotokoll ansehen <i>→</i></button></aside>
+  </section>
+
+  <section class="scene protocol" aria-labelledby="protocol-title">
+    <div class="protocol-image"><canvas data-protocol-memory></canvas></div>
+    <article class="protocol-copy"><h2 id="protocol-title">Das ist geblieben.</h2><blockquote data-protocol></blockquote><p>Kein Ergebnis. Kein richtig oder falsch. Nur ein Protokoll davon, wie dein Blick ausgewählt hat.</p><button class="download-drawing" data-download>Meine Zeichnung herunterladen <span>↓</span></button><div class="protocol-actions"><button data-another>Anderes Werk <span>→</span></button><button data-restart>Noch einmal <span>↺</span></button><button data-from-start>Von Anfang beginnen <span>↖</span></button></div><small data-credit></small></article>
+  </section>
+
+  <div class="transition" aria-hidden="true"></div><div class="progress" aria-hidden="true"><i></i></div>
+</main>
+<script src="memory.js?v=22"></script>
+</body>
+</html>
