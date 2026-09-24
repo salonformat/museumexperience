@@ -719,10 +719,10 @@ small,.prologue-learning,.art-stage figcaption span{font-size:12px!important}
 /* Two quiet, imperfect marker strokes — an underline, never a title panel. */
 .prologue-copy h1{isolation:isolate;color:var(--ink)!important}
 .prologue-copy h1 em{position:relative;isolation:isolate;color:var(--ink)!important}
-.prologue-copy h1:before,.prologue-copy h1 em:before{content:"";position:absolute;z-index:-1;height:.2em;background:rgba(181,194,190,.72);box-shadow:0 3px 0 rgba(207,199,178,.28);transform-origin:left center;pointer-events:none}
+.prologue-copy h1:before,.prologue-copy h1 em:before{content:"";position:absolute;z-index:-1;height:.2em;background:rgba(222,174,148,.72);box-shadow:0 3px 0 rgba(239,205,183,.3);transform-origin:left center;pointer-events:none}
 .prologue-copy h1:before{left:-.03em;top:.57em;width:2.18em;transform:rotate(-1.8deg) skewX(-5deg)}
 .prologue-copy h1 em:before{left:-.05em;bottom:.05em;width:3.32em;transform:rotate(.8deg) skewX(4deg)}
 .prologue-copy h1:after{content:none}
 @media(max-width:760px){
-  .prologue-copy h1:before,.prologue-copy h1 em:before{height:.18em;box-shadow:0 2px 0 rgba(207,199,178,.25)}
+  .prologue-copy h1:before,.prologue-copy h1 em:before{height:.18em;box-shadow:0 2px 0 rgba(239,205,183,.28)}
 }
