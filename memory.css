@@ -612,6 +612,7 @@ small,.prologue-learning,.art-stage figcaption span{font-size:12px!important}
 .comparison-stage img,.comparison-stage canvas{transition:opacity .15s linear,filter .7s var(--ease),transform .9s var(--ease)!important}
 .reveal-complete .comparison-stage{background:#d8cabb;filter:saturate(.92)}
 .reveal-complete .comparison-stage img,.reveal-complete .comparison-stage canvas{filter:contrast(1.035)}
+.experience[data-scene=compare] .reveal-note{display:none!important}
 .reveal-complete .reveal-note{animation:reveal-statement 2.8s var(--ease) both}
 @keyframes reveal-statement{0%{opacity:0;transform:translate(-50%,-40%) scale(.9)}15%,72%{opacity:1;transform:translate(-50%,-50%) scale(1)}100%{opacity:0;transform:translate(-50%,-56%) scale(1.03)}}
 
