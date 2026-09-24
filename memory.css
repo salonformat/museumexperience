@@ -716,11 +716,13 @@ small,.prologue-learning,.art-stage figcaption span{font-size:12px!important}
 .experience.is-preview:not([data-scene=prologue]) .prologue{display:none!important}
 .experience.is-preview[data-scene=prologue] .prologue,.experience.is-preview[data-scene=index] .index,.experience.is-preview[data-scene=observe] .observe,.experience.is-preview[data-scene=recall] .recall,.experience.is-preview[data-scene=compare] .compare,.experience.is-preview[data-scene=discover] .discover,.experience.is-preview[data-scene=protocol] .protocol{opacity:1;visibility:visible;pointer-events:auto}
 
-/* The title sits on a loose, pale paper/pastel field instead of red display type. */
+/* Two quiet, imperfect marker strokes — an underline, never a title panel. */
 .prologue-copy h1{isolation:isolate;color:var(--ink)!important}
-.prologue-copy h1 em{color:var(--ink)!important}
-.prologue-copy h1:before{content:"";position:absolute;z-index:-1;inset:-.11em -.16em -.09em -.1em;background:#eadfbd;box-shadow:-9px 7px 0 rgba(244,235,207,.64),7px -4px 0 rgba(226,211,170,.34);transform:rotate(-1.1deg) skewX(-.7deg)}
-.prologue-copy h1:after{content:"";position:absolute;z-index:-1;left:-.15em;right:-.05em;bottom:-.14em;height:.17em;background:rgba(215,196,145,.5);filter:blur(4px);transform:rotate(.7deg)}
+.prologue-copy h1 em{position:relative;isolation:isolate;color:var(--ink)!important}
+.prologue-copy h1:before,.prologue-copy h1 em:before{content:"";position:absolute;z-index:-1;height:.2em;background:rgba(181,194,190,.72);box-shadow:0 3px 0 rgba(207,199,178,.28);transform-origin:left center;pointer-events:none}
+.prologue-copy h1:before{left:-.03em;top:.57em;width:2.18em;transform:rotate(-1.8deg) skewX(-5deg)}
+.prologue-copy h1 em:before{left:-.05em;bottom:.05em;width:3.32em;transform:rotate(.8deg) skewX(4deg)}
+.prologue-copy h1:after{content:none}
 @media(max-width:760px){
-  .prologue-copy h1:before{inset:-.12em -.1em -.1em -.07em;box-shadow:-5px 5px 0 rgba(244,235,207,.62),5px -3px 0 rgba(226,211,170,.32);transform:rotate(-.8deg) skewX(-.5deg)}
+  .prologue-copy h1:before,.prologue-copy h1 em:before{height:.18em;box-shadow:0 2px 0 rgba(207,199,178,.25)}
 }
