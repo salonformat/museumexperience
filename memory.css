@@ -563,6 +563,7 @@ small,.prologue-learning,.art-stage figcaption span{font-size:12px!important}
   .prologue-doodle{clip-path:inset(0 0 57% 0)}
 }
 .compare label:after{display:none}
+.prologue-visual .memory-trace{display:none}
 
 /* Final signature pass: airier title, tactile paper and a stronger drawn trace. */
 .prologue:before{right:3.9vw;top:7.5vh;bottom:6.8vh;width:41.5vw;transform:rotate(-.32deg);box-shadow:0 26px 62px rgba(37,33,29,.14)}
