@@ -657,3 +657,50 @@ small,.prologue-learning,.art-stage figcaption span{font-size:12px!important}
   .experience[data-work=tower] .drawing-tools{top:calc(46.5% + var(--frame-h)/2 + 9px)}
   .drawing-tools button,.drawing-tools label{flex:0 0 auto;white-space:nowrap}
 }
+
+/* Mobile prologue: a generous drawing field above a compact information sheet. */
+@media(max-width:760px){
+  .prologue:before{left:3vw;right:3vw;top:61.5%;bottom:2vh;width:auto}
+  .prologue-doodle{clip-path:inset(0 0 38.5% 0)}
+  .prologue-copy h1{top:13.5vh;font-size:clamp(61px,18.8vw,81px)}
+  .trace-invitation{top:42.5vh}
+  .prologue-intro{left:7vw;right:7vw;top:63.5vh}
+  .prologue-lead{font-size:clamp(20px,5.5vw,23px);line-height:1.06}
+  .prologue-learning{margin-top:10px;font-size:12.5px;line-height:1.34}
+  .prologue-copy>button{left:7vw;right:7vw;bottom:max(3.2vh,calc(17px + env(safe-area-inset-bottom)));min-height:60px;padding-left:15px;font-size:clamp(22px,6.3vw,27px)}
+  .prologue-copy>button i{width:50px;font-size:27px}
+}
+
+/* Mobile actions never hide below a scroll boundary. */
+@media(max-width:760px){
+  .compare-copy{top:calc(57px + env(safe-area-inset-top));max-height:none;padding:10px 13px 11px;overflow:visible}
+  .compare h2{font-size:clamp(22px,6.4vw,28px);line-height:1.02}
+  .compare-copy>p{margin:6px 0 10px;font-size:12px;line-height:1.3}
+  .compare-copy>p:after{width:42px;height:13px;margin-left:7px;vertical-align:-3px}
+  .compare label{gap:7px}
+  .compare-copy [data-to-discover]{min-height:44px;margin-top:9px;padding:8px 48px 8px 10px!important;font-size:15px!important}
+
+  .discovery-copy{height:47%;padding:15px 6vw 76px;overflow:hidden}
+  .discovery-copy>p{margin-bottom:6px}
+  .discovery-copy h2{font-size:clamp(23px,6.6vw,29px);line-height:1.02}
+  .detail-text{flex:1 1 auto;min-height:0;margin-top:9px;padding-top:8px;overflow-y:auto;overscroll-behavior:contain}
+  .detail-text h3{font-size:18px;line-height:1.1}
+  .detail-text p{font-size:12px;line-height:1.33}
+  .detail-count{position:absolute;left:6vw;right:6vw;bottom:59px;margin:0;background:var(--light);padding-top:5px}
+  .discovery-copy>[data-to-protocol]{position:absolute;left:6vw;right:6vw;bottom:10px;min-height:44px;margin:0;padding:8px 48px 8px 10px!important;background:var(--ink);color:#fff;font-size:15px!important}
+  .discovery-copy>[data-to-protocol]:disabled{background:rgba(37,33,29,.12);color:rgba(37,33,29,.46)}
+
+  .protocol-copy{padding:18px 6vw 14px;overflow-y:auto}
+  .protocol h2{margin-bottom:10px;font-size:clamp(37px,11vw,47px)}
+  .protocol blockquote{font-size:19px;line-height:1.15}
+  .protocol-copy>p{margin-top:10px;font-size:12px;line-height:1.35}
+  .download-drawing{min-height:44px;margin-top:12px;padding:9px 46px 9px 9px!important;font-size:15px!important}
+  .protocol-actions{gap:8px;margin-top:10px}
+  .protocol-actions button{min-height:42px;padding:8px 0;font-size:14px}
+  .adaptable-note{margin-top:14px!important;padding-top:10px;font-size:12px!important}
+}
+
+/* Isolated scene previews are used only for responsive QA. */
+.experience.is-preview .scene{opacity:0;visibility:hidden;pointer-events:none}
+.experience.is-preview:not([data-scene=prologue]) .prologue{display:none!important}
+.experience.is-preview[data-scene=prologue] .prologue,.experience.is-preview[data-scene=index] .index,.experience.is-preview[data-scene=observe] .observe,.experience.is-preview[data-scene=recall] .recall,.experience.is-preview[data-scene=compare] .compare,.experience.is-preview[data-scene=discover] .discover,.experience.is-preview[data-scene=protocol] .protocol{opacity:1;visibility:visible;pointer-events:auto}

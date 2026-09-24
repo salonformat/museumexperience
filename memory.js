@@ -120,7 +120,7 @@ q('[data-compare]').addEventListener('input',event=>event.target.style.setProper
 /* Some browsers restore hash entries without our state object. The hash remains the fallback. */
 addEventListener('popstate',event=>{if(event.state?.scene)return;const scene=location.hash.slice(1);if(['prologue','index','observe','recall','compare','discover','protocol'].includes(scene)){clearInterval(timerId);go(scene,{record:false})}});
 
-const preview=new URLSearchParams(location.search);if(preview.has('preview')){const key=preview.get('work');if(works[key])state.work=key;root.dataset.work=state.work;const w=current(),t=workText();q('[data-art-image]').src=q('[data-compare-image]').src=q('[data-discover-image]').src=w.image;q('[data-art-title]').textContent=t.title;q('[data-art-meta]').textContent=t.meta;root.dataset.scene=preview.get('preview');requestAnimationFrame(()=>{if(root.dataset.scene==='recall')prepareDrawing(true);if(root.dataset.scene==='protocol')q('[data-credit]').textContent=t.credit})}
+const preview=new URLSearchParams(location.search);if(preview.has('preview')){root.classList.add('is-preview');const key=preview.get('work');if(works[key])state.work=key;root.dataset.work=state.work;const w=current(),t=workText();q('[data-art-image]').src=q('[data-compare-image]').src=q('[data-discover-image]').src=w.image;q('[data-art-title]').textContent=t.title;q('[data-art-meta]').textContent=t.meta;root.dataset.scene=preview.get('preview');requestAnimationFrame(()=>{if(root.dataset.scene==='recall')prepareDrawing(true);if(root.dataset.scene==='protocol')q('[data-credit]').textContent=t.credit})}
 
 /* The first screen quietly previews the core gesture: looking leaves a trace. */
 const prologueDoodle=q('[data-prologue-doodle]');let doodlePoint=null;
