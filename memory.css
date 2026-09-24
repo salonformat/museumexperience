@@ -702,6 +702,14 @@ small,.prologue-learning,.art-stage figcaption span{font-size:12px!important}
   .adaptable-note{margin-top:14px!important;padding-top:10px;font-size:12px!important}
 }
 
+/* Mobile object labels sit outside the artwork, never on top of it. */
+@media(max-width:760px){
+  .art-stage figcaption{left:4vw;right:4vw;top:calc(53% - var(--frame-h)/2 - 62px);bottom:auto;max-width:none;padding:0;background:transparent;color:#f8f4ec}
+  .experience[data-work=tower] .art-stage figcaption{top:calc(46.5% - var(--frame-h)/2 - 62px)}
+  .art-stage figcaption b{font-size:16px;line-height:1.1}
+  .art-stage figcaption span{max-width:92vw;margin-top:4px;font-size:10px!important;line-height:1.25}
+}
+
 /* Isolated scene previews are used only for responsive QA. */
 .experience.is-preview .scene{opacity:0;visibility:hidden;pointer-events:none}
 .experience.is-preview:not([data-scene=prologue]) .prologue{display:none!important}
