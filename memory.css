@@ -640,3 +640,18 @@ small,.prologue-learning,.art-stage figcaption span{font-size:12px!important}
 }
 
 @media(prefers-reduced-motion:reduce){.experience.is-transitioning .transition,.experience.is-transitioning.has-transition-copy .transition span,.reveal-complete .reveal-note,.experience[data-scene=observe] .art-stage,.experience[data-scene=recall] .absence canvas,.experience[data-scene=protocol] .protocol-image canvas{animation-duration:.01ms!important}}
+
+/* Phone drawing mode: the paper is the main surface, instructions become a compact tab. */
+@media(max-width:760px){
+  .experience[data-work=tower]{--frame-w:min(96vw,70.8vh);--frame-h:min(70.8vw,52vh)}
+  .experience[data-work=shield]{--frame-w:min(96vw,39.8vh);--frame-h:min(127.8vw,53vh)}
+  .experience[data-work=relief]{--frame-w:min(96vw,41.6vh);--frame-h:min(121.6vw,53vh)}
+  .art-stage img,.absence canvas,.comparison-stage img,.comparison-stage canvas{top:58%!important}
+  .recall-copy{left:auto;right:3vw;top:calc(57px + env(safe-area-inset-top));width:min(68vw,280px);max-height:21vh;padding:10px 13px 11px;background:rgba(250,248,242,.96)}
+  .recall-step{display:none}
+  .recall h2{max-width:none;font-size:clamp(21px,6vw,26px);line-height:1.02}
+  .recall .question-note{margin:6px 0 7px;font-size:12px;line-height:1.28}
+  .recall .drawing-done{min-height:42px;margin-top:2px;padding:7px 1px;font-size:14px}
+  .drawing-tools{left:3vw;right:3vw;top:auto;bottom:max(10px,env(safe-area-inset-bottom));width:auto;max-width:none;flex-wrap:nowrap;overflow-x:auto;justify-content:flex-start;background:rgba(250,248,242,.97);box-shadow:0 10px 28px rgba(37,33,29,.16)}
+  .drawing-tools button,.drawing-tools label{flex:0 0 auto;white-space:nowrap}
+}
