@@ -1,4 +1,6 @@
 @font-face{font-family:Della;src:url('assets/DellaRespira-Regular.ttf') format('truetype');font-display:swap}
+@font-face{font-family:BodoniModa;src:url('assets/BodoniModa-Variable.ttf') format('truetype');font-style:normal;font-weight:400 900;font-display:swap}
+@font-face{font-family:BodoniModa;src:url('assets/BodoniModa-Italic-Variable.ttf') format('truetype');font-style:italic;font-weight:400 900;font-display:swap}
 :root{--paper:#f2efe7;--light:#faf8f2;--ink:#25211d;--red:#a83329;--blue:#315c7c;--dust:#d8cabb;--ease:cubic-bezier(.16,1,.3,1)}
 *{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:var(--paper);color:var(--ink)}body{font-family:Arial,Helvetica,sans-serif;-webkit-font-smoothing:antialiased}button,input{font:inherit;color:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible{outline:2px solid var(--blue);outline-offset:5px}::selection{background:var(--red);color:#fff}
 .experience{position:relative;width:100vw;height:100dvh;overflow:hidden;background:var(--paper)}.experience:after{content:"";position:fixed;z-index:90;inset:0;pointer-events:none;opacity:.038;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
@@ -346,6 +348,81 @@ small,.prologue-learning,.art-stage figcaption span{font-size:12px!important}
   .experience[data-work=tower] .h-one{left:70%;top:60%;right:auto;bottom:auto}
   .experience[data-work=tower] .h-two{left:22%;top:47%;right:auto;bottom:auto}
   .experience[data-work=tower] .h-three{left:68%;top:43%;right:auto;bottom:auto}
+}
+
+/* Prologue v5 — a typographic museum poster that becomes a drawing surface. */
+.experience[data-scene=prologue] .masthead{mix-blend-mode:normal;color:var(--ink)}
+.prologue{background:linear-gradient(90deg,#dce3eb 0 55%,#fbfaf6 55% 100%);color:var(--ink)}
+.prologue-visual{inset:0;background:transparent;overflow:hidden}
+.prologue-visual:after{background:linear-gradient(90deg,transparent 0 55%,rgba(251,250,246,.84) 55% 100%)}
+.prologue-visual .memory-trace{
+  left:-17%;top:47%;width:83%;height:auto;opacity:.68;mix-blend-mode:multiply;
+  filter:saturate(.82) contrast(1.1) brightness(1.12);transform:rotate(-7deg) scale(1.08);animation:prologue-material 12s var(--ease) both;
+}
+.prologue-visual>i:nth-of-type(1){left:54.8%;top:0;height:100%;transform:none;background:rgba(37,33,29,.22)}
+.prologue-visual>i:nth-of-type(2){left:8%;top:76%;height:17vh;transform:rotate(78deg);background:rgba(168,51,41,.65)}
+.prologue-visual>i:nth-of-type(3){left:39%;top:13%;height:13vh;transform:rotate(22deg);background:rgba(37,33,29,.38)}
+.prologue-doodle{z-index:3;opacity:.82}
+.prologue-copy{z-index:4;color:var(--ink)}
+.prologue-copy h1{
+  left:4.8vw;top:15vh;width:48vw;max-width:none;color:var(--ink);text-shadow:none;
+  font-family:BodoniModa,serif;font-size:clamp(102px,12.7vw,194px);font-weight:520;line-height:.68;letter-spacing:-.038em;
+}
+.prologue-copy h1 em{margin-left:.19em;font-family:BodoniModa,serif;font-style:italic;font-weight:600;color:var(--red)}
+.prologue-eye{left:5vw;top:10.2vh;max-width:43vw;color:var(--ink);font-family:Arial,Helvetica,sans-serif;font-size:12px!important;font-weight:700;letter-spacing:.15em}
+.prologue-eye a{border-bottom-color:currentColor}
+.prologue-intro{
+  left:61vw;right:auto;top:16vh;width:min(32vw,520px);padding:0;background:transparent;border:0;backdrop-filter:none;
+}
+.prologue-lead{max-width:17ch;color:var(--ink);font-family:BodoniModa,serif;font-size:clamp(31px,3vw,46px);font-weight:480;line-height:1.03;letter-spacing:-.025em}
+.prologue-learning{max-width:53ch;margin-top:28px;color:var(--ink);font-size:15px;line-height:1.55}
+.prologue-copy>button{
+  left:61vw;right:5vw;bottom:10vh;width:auto;min-height:92px;justify-content:flex-start;gap:0;padding:0 92px 0 25px;
+  border:0;background:var(--ink);color:#fff;font-family:BodoniModa,serif;font-size:clamp(30px,3vw,46px);font-weight:500;line-height:1;text-align:left;
+  box-shadow:0 18px 38px rgba(37,33,29,.15);transition:transform .3s var(--ease),box-shadow .3s var(--ease),background .3s;
+}
+.prologue-copy>button i{position:absolute;right:0;top:0;width:72px;height:100%;display:grid;place-items:center;background:var(--red);color:#fff;font-family:Della;font-size:36px;animation:none}
+.prologue-copy>button:hover,.prologue-copy>button:focus-visible{color:#fff;background:#151311;transform:translateY(-3px);box-shadow:0 24px 48px rgba(37,33,29,.22)}
+.prologue-copy>button:hover i,.prologue-copy>button:focus-visible i{transform:translateX(0)}
+@keyframes prologue-material{from{transform:rotate(-9deg) scale(1.16) translateX(-4%);opacity:.1}to{transform:rotate(-7deg) scale(1.08);opacity:.68}}
+
+@media(min-width:761px) and (max-width:1100px){
+  .prologue{background:linear-gradient(90deg,#dce3eb 0 51%,#fbfaf6 51% 100%)}
+  .prologue-visual:after{background:linear-gradient(90deg,transparent 0 51%,rgba(251,250,246,.86) 51% 100%)}
+  .prologue-visual>i:nth-of-type(1){left:50.8%}
+  .prologue-copy h1{left:4vw;top:20vh;width:45vw;font-size:clamp(82px,12vw,132px)}
+  .prologue-copy h1 em{margin-left:.12em}
+  .prologue-eye{left:4.2vw;top:12vh;max-width:43vw}
+  .prologue-intro{left:56vw;top:18vh;width:39vw}
+  .prologue-lead{font-size:clamp(28px,3.6vw,39px)}
+  .prologue-learning{font-size:14px;line-height:1.48}
+  .prologue-copy>button{left:20vw;right:5vw;bottom:14vh;min-height:88px;font-size:clamp(34px,4.5vw,46px)}
+  .prologue-visual .memory-trace{left:-24%;top:50%;width:81%}
+}
+
+@media(max-width:760px){
+  .prologue{background:linear-gradient(180deg,#dce3eb 0 43%,#fbfaf6 43% 100%)}
+  .prologue-visual:after{background:linear-gradient(180deg,transparent 0 43%,rgba(251,250,246,.84) 43% 100%)}
+  .prologue-visual>i:nth-of-type(1){left:0;top:42.9%;width:100%;height:1px}
+  .prologue-visual>i:nth-of-type(2){left:69%;top:27%;height:12vh;transform:rotate(35deg)}
+  .prologue-visual>i:nth-of-type(3){left:12%;top:14%;height:10vh}
+  .prologue-visual .memory-trace{left:-28%;top:21%;width:148%;opacity:.52;transform:rotate(-7deg) scale(1.02)}
+  .prologue-copy h1{left:6vw;top:14.5vh;width:88vw;color:var(--ink);font-size:clamp(71px,22vw,94px);line-height:.67;text-shadow:none}
+  .prologue-copy h1 em{margin-left:.16em;color:var(--red)}
+  .prologue-eye{left:6vw;top:6.5vh;max-width:88vw;font-size:12px!important;letter-spacing:.11em}
+  .prologue-intro{left:6vw;right:6vw;top:48vh;width:auto;padding:0;background:transparent}
+  .prologue-lead{max-width:25ch;font-size:clamp(24px,7.1vw,31px);line-height:1.05}
+  .prologue-learning{margin-top:14px;font-size:13px;line-height:1.42}
+  .prologue-copy>button{left:6vw;right:6vw;bottom:max(4vh,calc(20px + env(safe-area-inset-bottom)));width:auto;min-height:68px;padding:0 62px 0 17px;font-size:clamp(24px,7vw,31px)}
+  .prologue-copy>button i{width:54px;font-size:29px}
+}
+
+@media(max-height:700px) and (orientation:landscape){
+  .prologue-copy h1{left:4vw;top:18vh;font-size:17vh}
+  .prologue-eye{left:4.2vw;top:9vh}
+  .prologue-intro{left:58vw;top:16vh;width:36vw}
+  .prologue-lead{font-size:5.6vh}.prologue-learning{margin-top:12px;font-size:12px;line-height:1.35}
+  .prologue-copy>button{left:58vw;right:6vw;bottom:7vh;min-height:60px;font-size:5.5vh}
 }
 
 /* Prologue typesetting: two aligned reading fields and one clear action. */
