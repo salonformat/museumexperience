@@ -584,3 +584,58 @@ small,.prologue-learning,.art-stage figcaption span{font-size:12px!important}
   .prologue-copy h1{top:15.5vh;font-size:clamp(61px,18.8vw,81px);line-height:.75;letter-spacing:-.02em}
   .prologue-copy h1 em{margin-left:.21em}
 }
+
+/* Signature dramaturgy: the visitor creates the opening, then the work returns as an event. */
+.trace-invitation{position:absolute;z-index:5;left:5vw;bottom:7vh;margin:0;padding:8px 0;border-bottom:1px solid rgba(37,33,29,.42);color:rgba(37,33,29,.72);font:15px/1.3 Della;pointer-events:none;transition:opacity .45s var(--ease),transform .45s var(--ease)}
+.trace-invitation:before{content:"";display:inline-block;width:46px;height:12px;margin-right:12px;vertical-align:1px;border-top:2px solid var(--red);transform:rotate(-5deg)}
+.has-trace .trace-invitation{opacity:0;transform:translateY(9px)}
+.prologue-copy h1{transition:transform 1.1s var(--ease),letter-spacing 1.1s var(--ease)}
+.has-trace .prologue-copy h1{transform:translate3d(1.2vw,-.6vh,0) rotate(-.35deg);letter-spacing:-.018em}
+
+.format-note{max-width:30ch!important;margin-top:24px!important;padding-top:14px;border-top:1px solid currentColor;font:13px/1.45 Arial,Helvetica,sans-serif!important;letter-spacing:0!important;text-transform:none!important;opacity:.78}
+
+.transition{display:grid;place-items:center;background:var(--red);color:#fff}
+.transition span{max-width:18ch;padding:0 7vw;text-align:center;font:clamp(34px,5.5vw,82px)/1.02 Della;letter-spacing:-.025em;opacity:0;transform:translateY(22px)}
+.experience.is-transitioning .transition{animation:signature-wipe 1.3s var(--ease)}
+.experience.is-transitioning.has-transition-copy .transition span{animation:transition-words 1.3s var(--ease)}
+@keyframes signature-wipe{0%{clip-path:inset(0 100% 0 0)}38%,66%{clip-path:inset(0)}100%{clip-path:inset(0 0 0 100%)}}
+@keyframes transition-words{0%,28%,82%,100%{opacity:0;transform:translateY(22px)}42%,68%{opacity:1;transform:translateY(0)}}
+
+.experience[data-scene=observe] .art-stage{animation:gallery-arrival 1.4s var(--ease) both}
+@keyframes gallery-arrival{from{clip-path:inset(48% 49%);filter:brightness(.55)}to{clip-path:inset(0);filter:brightness(1)}}
+.experience[data-scene=recall] .absence canvas{animation:blank-memory 1.15s var(--ease) both}
+@keyframes blank-memory{from{opacity:0;filter:brightness(1.5);transform:translate(-50%,-50%) scale(.94)}to{opacity:1;filter:brightness(1);transform:translate(-50%,-50%) scale(1)}}
+
+.reveal-note{position:absolute;z-index:10;left:50%;top:50%;max-width:18ch;margin:0;padding:20px 25px;background:var(--red);color:#fff;text-align:center;font:clamp(28px,3.5vw,52px)/1.08 Della;letter-spacing:-.02em;opacity:0;pointer-events:none;transform:translate(-50%,-42%) scale(.92);transition:opacity .45s var(--ease),transform .7s var(--ease)}
+.comparison-stage{transition:background .7s var(--ease),filter .7s var(--ease)}
+.comparison-stage img,.comparison-stage canvas{transition:opacity .15s linear,filter .7s var(--ease),transform .9s var(--ease)!important}
+.reveal-complete .comparison-stage{background:#d8cabb;filter:saturate(.92)}
+.reveal-complete .comparison-stage img,.reveal-complete .comparison-stage canvas{filter:contrast(1.035)}
+.reveal-complete .reveal-note{animation:reveal-statement 2.8s var(--ease) both}
+@keyframes reveal-statement{0%{opacity:0;transform:translate(-50%,-40%) scale(.9)}15%,72%{opacity:1;transform:translate(-50%,-50%) scale(1)}100%{opacity:0;transform:translate(-50%,-56%) scale(1.03)}}
+
+.discovery-copy{overflow:auto}
+.looking-insight{display:block;margin-top:18px;padding:14px 0 2px;border-top:1px solid rgba(168,51,41,.34);color:var(--red)}
+.looking-insight span{display:block;margin-bottom:7px;font:700 10px/1.2 Arial,Helvetica,sans-serif;letter-spacing:.12em;text-transform:uppercase}
+.looking-insight strong{display:block;font:17px/1.3 Della;font-weight:400}
+.detail-text{min-height:0}
+.discovery-copy{padding-top:9vh;padding-bottom:3vh}
+.discovery-copy h2{font-size:clamp(32px,2.7vw,43px)}
+.detail-text{margin-top:4vh;padding-top:13px;flex:0 0 auto}
+.detail-text p{font-size:13px;line-height:1.42}
+.detail-count{margin-top:18px}
+.discovery-copy>button{margin-top:12px;flex:0 0 auto}
+
+.protocol-image:after{content:"DEIN BLICK";position:absolute;right:3vw;bottom:3vh;color:rgba(37,33,29,.42);font:700 11px/1 Arial;letter-spacing:.18em;pointer-events:none}
+.experience[data-scene=protocol] .protocol-image canvas{animation:memory-final 1.5s var(--ease) both}
+@keyframes memory-final{from{opacity:0;filter:blur(9px);transform:scale(1.06)}to{opacity:1;filter:blur(0);transform:scale(1)}}
+
+@media(max-width:760px){
+  .trace-invitation{left:6vw;right:6vw;top:37vh;bottom:auto;font-size:13px}.trace-invitation:before{width:32px;margin-right:8px}
+  .format-note{display:none!important}
+  .transition span{font-size:clamp(31px,10vw,48px)}
+  .reveal-note{top:59%;width:82vw;padding:16px 18px;font-size:clamp(25px,7.4vw,34px)}
+  .looking-insight{margin-top:10px;padding-top:9px}.looking-insight span{margin-bottom:4px;font-size:9px}.looking-insight strong{font-size:15px;line-height:1.25}
+}
+
+@media(prefers-reduced-motion:reduce){.experience.is-transitioning .transition,.experience.is-transitioning.has-transition-copy .transition span,.reveal-complete .reveal-note,.experience[data-scene=observe] .art-stage,.experience[data-scene=recall] .absence canvas,.experience[data-scene=protocol] .protocol-image canvas{animation-duration:.01ms!important}}

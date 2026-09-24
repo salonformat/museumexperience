@@ -8,7 +8,7 @@
   <link rel="preload" href="assets/DellaRespira-Regular.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="preload" href="assets/Fraunces-Variable.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="preload" href="assets/was-bleibt/harvesters-met.jpg" as="image">
-  <link rel="stylesheet" href="memory.css?v=29">
+  <link rel="stylesheet" href="memory.css?v=30">
 </head>
 <body>
 <main class="experience" data-scene="prologue" data-work="tower">
@@ -24,6 +24,7 @@
       <i></i><i></i><i></i>
     </div>
     <canvas class="prologue-doodle" data-prologue-doodle aria-hidden="true"></canvas>
+    <p class="trace-invitation" data-trace-invitation>Bewege den Cursor und hinterlasse eine Spur.</p>
     <article class="prologue-copy">
       <h1 id="prologue-title">Was<br><em>bleibt?</em></h1>
       <p class="prologue-eye">Eine digitale Learning Experience von <a href="https://salonformat.com" target="_blank" rel="noopener noreferrer">Salonformat</a></p>
@@ -46,6 +47,7 @@
         <button data-jump-select="shield">Gefäß mit Gesichtshals <i>→</i></button>
         <button data-jump-select="relief">Maske <i>→</i></button>
       </div>
+      <p class="format-note" data-format-note>Drei Werke bilden den Anfang. Das Format lässt sich mit Sammlungen aus jedem Museum weiterführen.</p>
     </div>
     <div class="work-list" data-work-list>
       <article class="work-entry tower-entry">
@@ -93,6 +95,7 @@
 
   <section class="scene compare" aria-labelledby="compare-title">
     <div class="comparison-stage"><img data-compare-image alt=""><canvas data-comparison-memory></canvas></div>
+    <p class="reveal-note" data-reveal-note aria-live="polite">Erinnerung und Werk liegen jetzt übereinander.</p>
     <div class="compare-copy"><h2 id="compare-title">Schau noch einmal.</h2><p>Zieh den Regler ganz nach rechts. So kommt das wirkliche Bild langsam zurück.</p><label><span>ERINNERUNG</span><input data-compare type="range" min="0" max="100" value="8" aria-label="Vom Erinnerungsbild zum wirklichen Bild"><span>WERK</span></label><button data-to-discover disabled>Weiter zu den Details <i>→</i></button></div>
   </section>
 
@@ -106,8 +109,8 @@
     <article class="protocol-copy"><h2 id="protocol-title">Das ist geblieben.</h2><blockquote data-protocol></blockquote><p>Kein Ergebnis. Kein richtig oder falsch. Nur ein Protokoll davon, wie dein Blick ausgewählt hat.</p><button class="download-drawing" data-download>Meine Zeichnung herunterladen <span>↓</span></button><div class="protocol-actions"><button data-another>Anderes Werk <span>→</span></button><button data-restart>Noch einmal <span>↺</span></button><button data-from-start>Von Anfang beginnen <span>↖</span></button></div><small data-credit></small></article>
   </section>
 
-  <div class="transition" aria-hidden="true"></div><div class="progress" aria-hidden="true"><i></i></div>
+  <div class="transition" aria-hidden="true"><span data-transition-copy></span></div><div class="progress" aria-hidden="true"><i></i></div>
 </main>
-<script src="memory.js?v=24"></script>
+<script src="memory.js?v=25"></script>
 </body>
 </html>
