@@ -563,3 +563,23 @@ small,.prologue-learning,.art-stage figcaption span{font-size:12px!important}
   .prologue-doodle{clip-path:inset(0 0 57% 0)}
 }
 .compare label:after{display:none}
+
+/* Final signature pass: airier title, tactile paper and a stronger drawn trace. */
+.prologue:before{right:3.9vw;top:7.5vh;bottom:6.8vh;width:41.5vw;transform:rotate(-.32deg);box-shadow:0 26px 62px rgba(37,33,29,.14)}
+.prologue:after{content:"";position:absolute;z-index:2;right:3.9vw;top:7.5vh;bottom:6.8vh;width:41.5vw;background:url('assets/plates/provenance-pigment.png') 74% 63%/165% auto no-repeat;mix-blend-mode:multiply;opacity:.055;transform:rotate(-.32deg);pointer-events:none}
+.prologue-copy h1{top:16.5vh;font-size:clamp(82px,10.8vw,162px);line-height:.76;letter-spacing:-.027em}
+.prologue-copy h1 em{margin-left:.26em}
+.prologue-doodle{opacity:1}
+
+@media(min-width:761px) and (max-width:1100px){
+  .prologue:before,.prologue:after{right:3.4vw;top:8.5vh;bottom:7.8vh;width:45vw}
+  .prologue-copy h1{top:21vh;font-size:clamp(70px,10.2vw,112px);line-height:.77}
+  .prologue-copy h1 em{margin-left:.18em}
+}
+
+@media(max-width:760px){
+  .prologue:before,.prologue:after{left:3.3vw;right:3.3vw;top:42.8%;bottom:2.8vh;width:auto;transform:rotate(-.22deg)}
+  .prologue:after{background-position:60% 64%;background-size:230% auto;opacity:.045}
+  .prologue-copy h1{top:15.5vh;font-size:clamp(61px,18.8vw,81px);line-height:.75;letter-spacing:-.02em}
+  .prologue-copy h1 em{margin-left:.21em}
+}
