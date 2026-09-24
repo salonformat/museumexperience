@@ -7,14 +7,14 @@
   <title>Was bleibt? — Salonformat</title>
   <link rel="preload" href="assets/DellaRespira-Regular.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="preload" href="assets/was-bleibt/harvesters-met.jpg" as="image">
-  <link rel="stylesheet" href="memory.css?v=23">
+  <link rel="stylesheet" href="memory.css?v=24">
 </head>
 <body>
 <main class="experience" data-scene="prologue" data-work="tower">
   <header class="masthead">
     <button class="wordmark" data-home>SALONFORMAT</button>
     <p data-location>Was bleibt?</p>
-    <div class="masthead-actions"><nav class="languages" aria-label="Sprache wählen"><span class="language-label">Sprache</span><button class="active" data-lang="de">DE</button><button data-lang="en">EN</button><button data-lang="fr">FR</button></nav><button class="sound" data-sound aria-pressed="false">KLANG <i aria-hidden="true"></i></button></div>
+    <div class="masthead-actions"><nav class="languages" aria-label="Sprache wählen"><span class="language-label">Sprache</span><button class="active" data-lang="de" aria-pressed="true">DE</button><button data-lang="en" aria-pressed="false">EN</button><button data-lang="fr" aria-pressed="false">FR</button></nav><button class="sound" data-sound aria-pressed="false" hidden>KLANG <i aria-hidden="true"></i></button></div>
   </header>
 
   <section class="scene prologue" aria-labelledby="prologue-title">
@@ -22,6 +22,7 @@
       <img class="memory-trace" src="assets/plates/provenance-pigment.png" alt="">
       <i></i><i></i><i></i>
     </div>
+    <canvas class="prologue-doodle" data-prologue-doodle aria-hidden="true"></canvas>
     <article class="prologue-copy">
       <h1 id="prologue-title">Was<br><em>bleibt?</em></h1>
       <p class="prologue-eye">Eine digitale Learning Experience von <a href="https://salonformat.com" target="_blank" rel="noopener noreferrer">Salonformat</a></p>
@@ -71,10 +72,10 @@
     <div class="absence">
       <canvas data-memory aria-label="Leere Zeichenfläche für deine Erinnerung"></canvas>
       <div class="drawing-tools" aria-label="Zeichenwerkzeuge">
-        <button class="active tool-ink" data-tool="ink"><i></i>Tusche</button>
-        <button class="tool-brush" data-tool="brush"><i></i>Pinsel</button>
-        <button class="tool-pastel" data-tool="pastel"><i></i>Ölkreide</button>
-        <button class="tool-pencil" data-tool="pencil"><i></i>Buntstift</button>
+        <button class="active tool-ink" data-tool="ink" aria-pressed="true"><i></i>Tusche</button>
+        <button class="tool-brush" data-tool="brush" aria-pressed="false"><i></i>Pinsel</button>
+        <button class="tool-pastel" data-tool="pastel" aria-pressed="false"><i></i>Ölkreide</button>
+        <button class="tool-pencil" data-tool="pencil" aria-pressed="false"><i></i>Buntstift</button>
         <label>Farbe <input data-draw-color type="color" value="#29231e" aria-label="Zeichenfarbe wählen"></label>
         <button data-clear>Neu anfangen</button>
       </div>
@@ -106,6 +107,6 @@
 
   <div class="transition" aria-hidden="true"></div><div class="progress" aria-hidden="true"><i></i></div>
 </main>
-<script src="memory.js?v=22"></script>
+<script src="memory.js?v=23"></script>
 </body>
 </html>

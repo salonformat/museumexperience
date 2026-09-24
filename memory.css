@@ -262,6 +262,92 @@ small,.prologue-learning,.art-stage figcaption span{font-size:12px!important}
   .protocol{display:grid;grid-template-columns:45% 55%}.protocol-image{position:relative;inset:auto}.protocol-copy{position:relative;height:auto;padding:12vh 5vw 4vh}.protocol h2{font-size:9vh}
 }
 
+/* Interaction hierarchy — every choice reads immediately, without generic app chrome. */
+.sound[hidden]{display:none!important}
+
+:where(.entry-copy [data-select],.hide-art,.drawing-done,.compare-copy [data-to-discover],.discovery-copy [data-to-protocol],.download-drawing){
+  position:relative;isolation:isolate;width:100%;min-height:58px;padding:15px 62px 15px 16px!important;
+  border:1px solid var(--ink)!important;background:var(--ink)!important;color:var(--light)!important;
+  font:clamp(17px,1.45vw,21px)/1.1 Della!important;letter-spacing:-.01em;text-align:left;
+  box-shadow:0 0 0 rgba(37,33,29,0);transition:transform .25s var(--ease),box-shadow .3s var(--ease),background .25s,color .25s;
+}
+:where(.entry-copy [data-select],.hide-art,.drawing-done,.compare-copy [data-to-discover],.discovery-copy [data-to-protocol],.download-drawing)>:where(i,span){
+  position:absolute!important;inset:0 0 0 auto!important;float:none!important;display:grid!important;place-items:center;
+  width:52px;height:100%;margin:0!important;background:var(--red);color:#fff!important;font:28px/1 Della!important;font-style:normal!important;
+  transition:width .25s var(--ease),transform .25s var(--ease);
+}
+:where(.entry-copy [data-select],.hide-art,.drawing-done,.compare-copy [data-to-discover],.discovery-copy [data-to-protocol],.download-drawing):not(:disabled):hover,
+:where(.entry-copy [data-select],.hide-art,.drawing-done,.compare-copy [data-to-discover],.discovery-copy [data-to-protocol],.download-drawing):not(:disabled):focus-visible{
+  transform:translateY(-2px);box-shadow:0 12px 26px rgba(37,33,29,.18);
+}
+:where(.entry-copy [data-select],.hide-art,.drawing-done,.compare-copy [data-to-discover],.discovery-copy [data-to-protocol],.download-drawing):not(:disabled):hover>:where(i,span),
+:where(.entry-copy [data-select],.hide-art,.drawing-done,.compare-copy [data-to-discover],.discovery-copy [data-to-protocol],.download-drawing):not(:disabled):focus-visible>:where(i,span){width:60px}
+:where(.drawing-done,.compare-copy [data-to-discover],.discovery-copy [data-to-protocol]):disabled{
+  opacity:1!important;background:transparent!important;color:rgba(37,33,29,.42)!important;border-color:rgba(37,33,29,.28)!important;box-shadow:none;cursor:not-allowed;
+}
+:where(.drawing-done,.compare-copy [data-to-discover],.discovery-copy [data-to-protocol]):disabled>:where(i,span){background:rgba(37,33,29,.09);color:rgba(37,33,29,.38)!important}
+.hide-art{width:min(420px,calc(100vw - 8vw));background:var(--light)!important;color:var(--ink)!important;border-color:var(--light)!important}
+
+/* Choices in the work register behave like exhibits, not passive captions. */
+.index-register button{position:relative;padding:12px 52px 12px 8px;transition:padding .25s var(--ease),background .25s,color .25s}
+.index-register button i{position:absolute;right:10px;top:50%;transform:translateY(-50%)}
+.index-register button:hover,.index-register button:focus-visible{padding-left:16px;background:var(--ink);color:var(--light)}
+.index-register button:hover i,.index-register button:focus-visible i{transform:translate(5px,-50%)}
+
+/* Material tools are visibly selectable and expose their current state. */
+.drawing-tools [data-tool]{border:1px solid transparent!important;transition:background .2s,color .2s,border-color .2s,transform .2s}
+.drawing-tools [data-tool]:hover,.drawing-tools [data-tool]:focus-visible{border-color:rgba(37,33,29,.5)!important;transform:translateY(-1px)}
+.drawing-tools [data-tool][aria-pressed=true]{background:var(--ink)!important;color:var(--light)!important;border-color:var(--ink)!important}
+.drawing-tools [data-clear]{text-decoration:underline;text-decoration-color:rgba(37,33,29,.4);text-underline-offset:5px}
+
+/* The comparison slider is an action, not a decorative line. */
+.compare input[type=range]{height:34px;appearance:none;-webkit-appearance:none;background:transparent;cursor:ew-resize;accent-color:var(--red)}
+.compare input[type=range]::-webkit-slider-runnable-track{height:4px;background:linear-gradient(90deg,var(--red),var(--red)) 0/var(--slider-fill,8%) 100% no-repeat,rgba(37,33,29,.2)}
+.compare input[type=range]::-webkit-slider-thumb{appearance:none;-webkit-appearance:none;width:25px;height:25px;margin-top:-10px;border:2px solid var(--light);border-radius:50%;background:var(--red);box-shadow:0 0 0 1px var(--red),0 3px 9px rgba(37,33,29,.22)}
+.compare input[type=range]::-moz-range-track{height:4px;background:rgba(37,33,29,.2)}
+.compare input[type=range]::-moz-range-progress{height:4px;background:var(--red)}
+.compare input[type=range]::-moz-range-thumb{width:23px;height:23px;border:2px solid var(--light);border-radius:50%;background:var(--red);box-shadow:0 0 0 1px var(--red)}
+
+/* Unopened details invite one clear action; opened ones recede. */
+.hotspot:not(.seen){width:48px;height:48px;border:2px solid var(--light);background:var(--red);color:#fff;box-shadow:0 5px 18px rgba(20,16,13,.35);transition:transform .2s var(--ease),box-shadow .2s}
+.hotspot:not(.seen):after{inset:-8px;border:1px solid rgba(255,255,255,.78);animation:detail-invite 2.2s ease-in-out infinite}
+.hotspot:not(.seen):hover,.hotspot:not(.seen):focus-visible{transform:scale(1.12);box-shadow:0 7px 24px rgba(20,16,13,.48)}
+.hotspot.seen{opacity:.58;transform:scale(.84)}
+@keyframes detail-invite{50%{transform:scale(1.14);opacity:.18}}
+
+/* A lighter, more Salonformat-like opening: scale and material create the impact. */
+.prologue{background:#f4f1ea;color:var(--ink)}
+.prologue-doodle{position:absolute;z-index:2;inset:0;width:100%;height:100%;pointer-events:none;mix-blend-mode:multiply;opacity:.72}
+.prologue-visual{background:radial-gradient(circle at 67% 45%,#fff 0,#f1ebe1 47%,#e7ddd1 100%)}
+.prologue-visual:after{background:linear-gradient(90deg,rgba(244,241,234,.92),rgba(244,241,234,.1) 48%,rgba(244,241,234,.32)),linear-gradient(0deg,rgba(244,241,234,.86),transparent 58%)}
+.prologue-visual .memory-trace{mix-blend-mode:multiply;opacity:.76;filter:saturate(.92) contrast(1.1) brightness(1.12);transform:rotate(-4deg) scale(1.23)}
+.prologue-copy{color:var(--ink)}
+.prologue-copy h1,.prologue-lead{color:var(--ink)}
+.prologue-eye{color:var(--ink)}
+.prologue-intro{padding:24px 26px;background:rgba(250,248,242,.86);border-left:2px solid var(--red);backdrop-filter:blur(8px)}
+.prologue-learning{color:var(--ink)}
+.prologue-visual>i{background:rgba(37,33,29,.25)}
+.prologue-copy>button{color:var(--ink);border-top-color:rgba(37,33,29,.7);border-bottom-color:rgba(37,33,29,.35)}
+.prologue-copy>button:hover{color:var(--red)}
+.prologue-copy>button i{color:var(--red)}
+
+@media(max-width:760px){
+  :where(.entry-copy [data-select],.hide-art,.drawing-done,.compare-copy [data-to-discover],.discovery-copy [data-to-protocol],.download-drawing){min-height:52px;padding:12px 54px 12px 13px!important;font-size:17px!important}
+  :where(.entry-copy [data-select],.hide-art,.drawing-done,.compare-copy [data-to-discover],.discovery-copy [data-to-protocol],.download-drawing)>:where(i,span){width:46px}
+  .hotspot:not(.seen){width:44px;height:44px}
+  .prologue-visual{background:radial-gradient(circle at 60% 42%,#fff,#eee5d9 72%)}
+  .prologue-copy h1{color:var(--ink);text-shadow:none}
+  .prologue-intro{padding:18px 18px 16px;background:rgba(250,248,242,.9)}
+}
+
+@media(prefers-reduced-motion:reduce){.hotspot:not(.seen):after{animation:none}}
+
+@media(min-width:761px){
+  .experience[data-work=tower] .h-one{left:70%;top:60%;right:auto;bottom:auto}
+  .experience[data-work=tower] .h-two{left:22%;top:47%;right:auto;bottom:auto}
+  .experience[data-work=tower] .h-three{left:68%;top:43%;right:auto;bottom:auto}
+}
+
 /* Prologue typesetting: two aligned reading fields and one clear action. */
 @media (min-width:1101px){
   .prologue-eye{left:7.2vw;top:11.5vh;max-width:38vw;line-height:1.5}
