@@ -774,4 +774,12 @@ small,.prologue-learning,.art-stage figcaption span{font-size:12px!important}
     font-size:19px!important;
     line-height:1.55!important;
   }
+  .prologue-copy>button{
+    right:calc(6vw + 26px)!important;
+    bottom:calc(7vh + 22px)!important;
+    box-shadow:7px 8px 0 rgba(245,235,215,.9)!important;
+  }
+  .prologue-copy>button:hover,.prologue-copy>button:focus-visible{
+    box-shadow:8px 9px 0 rgba(245,235,215,.94)!important;
+  }
 }
