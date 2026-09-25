@@ -88,6 +88,41 @@
   .prologue-copy>button i{width:auto;height:auto;font-size:40px}.prologue-copy>small{bottom:2.2vh}
 }
 
+/* Let visitors look before the caption tells them what to see. The work is named
+   only after drawing, when image and memory meet again. */
+.art-stage figcaption{
+  display:none!important;
+}
+.compare-identity{
+  margin:12px 0 0;
+  padding-top:10px;
+  border-top:1px solid rgba(41,35,30,.22);
+}
+.compare-identity b{
+  display:block;
+  font:20px/1.1 Della,serif;
+  letter-spacing:-.015em;
+}
+.compare-identity span{
+  display:block;
+  margin-top:5px;
+  font:12px/1.35 Arial,sans-serif;
+  letter-spacing:.045em;
+  text-transform:uppercase;
+}
+@media(max-width:760px){
+  .compare-identity{
+    margin:4px 0 0;
+    padding-top:5px;
+  }
+  .compare-identity b{
+    font:700 12px/1.2 Arial,sans-serif;
+    letter-spacing:.035em;
+    text-transform:uppercase;
+  }
+  .compare-identity span{display:none}
+}
+
 /* Institutional pilot additions. */
 .institution-link{color:var(--ink);font:11px/1 Arial;text-decoration:none;text-transform:uppercase;letter-spacing:.11em;border-bottom:1px solid currentColor;padding-bottom:4px}
 .prototype-note{max-width:38ch!important;margin-top:14px!important;font:12px/1.4 Arial!important;color:#514943!important}
