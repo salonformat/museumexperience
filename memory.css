@@ -783,3 +783,22 @@ small,.prologue-learning,.art-stage figcaption span{font-size:12px!important}
     box-shadow:8px 9px 0 rgba(245,235,215,.94)!important;
   }
 }
+
+/* The object reading is split into perception and context. */
+.context-insight{
+  margin-top:16px;
+  padding-top:13px;
+  border-top:1px solid rgba(37,33,29,.24);
+}
+.context-insight>span{
+  display:block;
+  margin-bottom:7px;
+  font:700 10px/1.25 Arial,Helvetica,sans-serif;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+}
+.context-insight p{margin:0!important}
+@media(max-width:760px){
+  .context-insight{margin-top:10px;padding-top:9px}
+  .context-insight>span{margin-bottom:4px;font-size:9px}
+}
