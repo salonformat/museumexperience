@@ -728,13 +728,13 @@ small,.prologue-learning,.art-stage figcaption span{font-size:12px!important}
 }
 
 /* A compact entry gesture: marker-backed words and a separate arrow. */
-.prologue-copy>button{left:auto!important;right:6vw!important;bottom:8vh!important;width:auto!important;min-width:245px!important;min-height:80px!important;display:inline-flex!important;justify-content:space-between!important;align-items:center!important;gap:38px!important;padding:15px 21px 14px 25px!important;border:0!important;background:#deae94!important;color:var(--ink)!important;box-shadow:9px 8px 0 rgba(245,235,215,.96)!important;overflow:visible;font-size:clamp(30px,2.7vw,42px)!important;transform:rotate(-.35deg)!important;transition:transform .3s var(--ease),box-shadow .3s var(--ease)!important}
+.prologue-copy>button{left:auto!important;right:6vw!important;bottom:8vh!important;width:auto!important;min-width:0!important;min-height:76px!important;display:inline-flex!important;justify-content:flex-start!important;align-items:center!important;gap:24px!important;padding:13px 17px 12px 21px!important;border:0!important;background:#deae94!important;color:var(--ink)!important;box-shadow:9px 8px 0 rgba(245,235,215,.96)!important;overflow:visible;font-size:clamp(30px,2.7vw,42px)!important;transform:rotate(-.35deg)!important;transition:transform .3s var(--ease),box-shadow .3s var(--ease)!important}
 .prologue-copy>button span{position:relative;white-space:nowrap}
 .prologue-copy>button span:before{content:none}
 .prologue-copy>button i{position:static!important;width:auto!important;height:auto!important;flex:0 0 auto;display:block!important;border:0!important;background:transparent!important;color:var(--ink)!important;font-size:34px!important;transition:transform .3s var(--ease)!important}
 .prologue-copy>button:hover,.prologue-copy>button:focus-visible{background:#e4b79f!important;color:var(--ink)!important;box-shadow:12px 10px 0 rgba(245,235,215,.98)!important;transform:translateY(-3px) rotate(.15deg)!important}
 .prologue-copy>button:hover i,.prologue-copy>button:focus-visible i{background:transparent!important;color:var(--ink)!important;transform:translateX(6px)!important}
 @media(max-width:760px){
-  .prologue-copy>button{left:7vw!important;right:7vw!important;bottom:max(2.7vh,calc(13px + env(safe-area-inset-bottom)))!important;min-width:0!important;min-height:58px!important;gap:22px!important;padding:11px 17px 10px 20px!important;font-size:clamp(25px,7vw,30px)!important;box-shadow:6px 5px 0 rgba(245,235,215,.96)!important}
+  .prologue-copy>button{left:7vw!important;right:auto!important;bottom:max(2.7vh,calc(13px + env(safe-area-inset-bottom)))!important;width:auto!important;min-width:0!important;min-height:56px!important;gap:18px!important;padding:10px 14px 9px 17px!important;font-size:clamp(25px,7vw,30px)!important;box-shadow:6px 5px 0 rgba(245,235,215,.96)!important}
   .prologue-copy>button i{font-size:28px!important}
 }
