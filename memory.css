@@ -775,12 +775,18 @@ small,.prologue-learning,.art-stage figcaption span{font-size:12px!important}
     line-height:1.55!important;
   }
   .prologue-copy>button{
-    right:calc(6vw + 26px)!important;
+    left:61vw!important;
+    right:auto!important;
     bottom:calc(7vh + 22px)!important;
     box-shadow:7px 8px 0 rgba(245,235,215,.9)!important;
   }
   .prologue-copy>button:hover,.prologue-copy>button:focus-visible{
     box-shadow:8px 9px 0 rgba(245,235,215,.94)!important;
+  }
+}
+@media(min-width:761px) and (max-width:1100px){
+  .prologue-copy>button{
+    left:56vw!important;
   }
 }
 
@@ -801,4 +807,67 @@ small,.prologue-learning,.art-stage figcaption span{font-size:12px!important}
 @media(max-width:760px){
   .context-insight{margin-top:10px;padding-top:9px}
   .context-insight>span{margin-bottom:4px;font-size:9px}
+}
+
+/* Mobile prologue: text and action occupy separate, non-overlapping rows. */
+@media(max-width:760px){
+  .prologue:before{
+    top:68%!important;
+  }
+  .prologue-intro{
+    top:auto!important;
+    bottom:calc(100px + max(2.7vh, calc(13px + env(safe-area-inset-bottom))))!important;
+  }
+
+  .watch{
+    top:62px!important;
+    right:4vw!important;
+  }
+  .art-stage figcaption,
+  .experience[data-work=tower] .art-stage figcaption{
+    top:146px!important;
+    color:var(--ink)!important;
+  }
+  .art-stage figcaption b{
+    font-size:15px!important;
+  }
+  .art-stage figcaption span{
+    font-size:9px!important;
+  }
+
+  .comparison-stage{
+    inset:0 0 42%!important;
+  }
+  .compare-copy{
+    top:auto!important;
+    bottom:0!important;
+    height:42%!important;
+    max-height:none!important;
+    overflow:visible!important;
+  }
+  .comparison-stage img,
+  .comparison-stage canvas,
+  .experience[data-work=tower] .comparison-stage img,
+  .experience[data-work=tower] .comparison-stage canvas{
+    top:55%!important;
+  }
+  .experience[data-work=shield] .comparison-stage img,
+  .experience[data-work=shield] .comparison-stage canvas,
+  .experience[data-work=relief] .comparison-stage img,
+  .experience[data-work=relief] .comparison-stage canvas{
+    transform:translate(-50%,-50%) scale(.9)!important;
+  }
+  .experience[data-work=crown] .comparison-stage img,
+  .experience[data-work=crown] .comparison-stage canvas{
+    transform:translate(-50%,-50%) scale(.76)!important;
+  }
+
+  .protocol-copy{
+    padding-top:26px!important;
+    justify-content:flex-start!important;
+  }
+  .protocol h2{
+    line-height:1!important;
+    overflow:visible;
+  }
 }
