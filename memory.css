@@ -765,3 +765,13 @@ small,.prologue-learning,.art-stage figcaption span{font-size:12px!important}
   .prototype-note{position:static;width:auto;margin-top:14px!important;padding-bottom:16px;font-size:12px!important}
   .experience[data-work=crown]{--frame-w:min(89vw,42vh);--frame-h:min(126vw,59vh)}
 }
+
+/* The explanation must read as part of the proposition, not as fine print. */
+@media(min-width:761px){
+  .prologue-learning{
+    max-width:50ch!important;
+    margin-top:30px!important;
+    font-size:19px!important;
+    line-height:1.55!important;
+  }
+}
