@@ -8,4 +8,14 @@
   .hero h1 em {
     margin-left: .12em;
   }
+
+  .contact h2 {
+    font-size: clamp(64px, 8vw, 118px);
+  }
+}
+
+@media (max-width: 760px) {
+  .contact h2 {
+    font-size: clamp(54px, 16vw, 76px);
+  }
 }
