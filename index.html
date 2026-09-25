@@ -8,14 +8,14 @@
   <link rel="preload" href="assets/DellaRespira-Regular.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="preload" href="assets/Fraunces-Variable.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="preload" href="assets/was-bleibt/harvesters-met.jpg" as="image">
-  <link rel="stylesheet" href="memory.css?v=49">
+  <link rel="stylesheet" href="memory.css?v=52">
 </head>
 <body>
 <main class="experience" data-scene="prologue" data-work="tower">
   <header class="masthead">
     <button class="wordmark" data-home>SALONFORMAT</button>
     <p data-location>Was bleibt?</p>
-    <div class="masthead-actions"><nav class="languages" aria-label="Sprache wählen"><span class="language-label">Sprache</span><button class="active" data-lang="de" aria-pressed="true">DE</button><button data-lang="en" aria-pressed="false">EN</button><button data-lang="fr" aria-pressed="false">FR</button></nav><button class="sound" data-sound aria-pressed="false" hidden>KLANG <i aria-hidden="true"></i></button></div>
+    <div class="masthead-actions"><a class="institution-link" data-institution-link href="institutions.html">Für Museen</a><nav class="languages" aria-label="Sprache wählen"><span class="language-label">Sprache</span><button class="active" data-lang="de" aria-pressed="true">DE</button><button data-lang="en" aria-pressed="false">EN</button><button data-lang="fr" aria-pressed="false">FR</button></nav><button class="sound" data-sound aria-pressed="false" hidden>KLANG <i aria-hidden="true"></i></button></div>
   </header>
 
   <section class="scene prologue" aria-labelledby="prologue-title">
@@ -46,8 +46,10 @@
         <button data-jump-select="tower">Die Kornernte <i>→</i></button>
         <button data-jump-select="shield">Gefäß mit Gesichtshals <i>→</i></button>
         <button data-jump-select="relief">Maske <i>→</i></button>
+        <button data-jump-select="crown">Federkopfschmuck <i>→</i></button>
       </div>
       <p class="format-note" data-format-note>Drei Werke bilden den Anfang. Das Format lässt sich mit Sammlungen aus jedem Museum weiterführen.</p>
+      <p class="prototype-note" data-prototype-note>Unabhängiger Prototyp mit gemeinfreien Open-Access-Bildern des Met. Keine Kooperation mit den dargestellten Museen.</p>
     </div>
     <div class="work-list" data-work-list>
       <article class="work-entry tower-entry">
@@ -61,6 +63,10 @@
       <article class="work-entry relief-entry">
         <div class="entry-image object-image"><img src="assets/was-bleibt/mask-met.jpg" alt="Maske aus Papua-Neuguinea"></div>
         <div class="entry-copy"><small>MASKE · THE MET · OPEN ACCESS</small><h2>Maske</h2><p>Welche Linie, Öffnung oder Form erkennst du später wieder?</p><button data-select="relief">30 Sekunden hinsehen <i>→</i></button></div>
+      </article>
+      <article class="work-entry crown-entry">
+        <div class="entry-image object-image"><img src="assets/was-bleibt/chimu-headdress-met.jpg" alt="Chimú-Federkopfschmuck"></div>
+        <div class="entry-copy"><small>FEDERARBEIT · THE MET · OPEN ACCESS</small><h2>Federkopfschmuck</h2><p>Welche Form und welche Bewegung bleiben von einem Objekt aus Federn?</p><button data-select="crown">30 Sekunden hinsehen <i>→</i></button></div>
       </article>
     </div>
   </section>
@@ -111,6 +117,6 @@
 
   <div class="transition" aria-hidden="true"><span data-transition-copy></span></div><div class="progress" aria-hidden="true"><i></i></div>
 </main>
-<script src="memory.js?v=37"></script>
+<script src="memory.js?v=40"></script>
 </body>
 </html>

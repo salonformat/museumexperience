@@ -1,0 +1,11 @@
+@media (min-width: 761px) {
+  .hero h1 {
+    width: 46vw;
+    font-size: clamp(70px, 9vw, 132px);
+    line-height: .78;
+  }
+
+  .hero h1 em {
+    margin-left: .12em;
+  }
+}

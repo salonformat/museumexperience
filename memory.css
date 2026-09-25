@@ -88,6 +88,23 @@
   .prologue-copy>button i{width:auto;height:auto;font-size:40px}.prologue-copy>small{bottom:2.2vh}
 }
 
+/* Institutional pilot additions. */
+.institution-link{color:var(--ink);font:11px/1 Arial;text-decoration:none;text-transform:uppercase;letter-spacing:.11em;border-bottom:1px solid currentColor;padding-bottom:4px}
+.prototype-note{max-width:38ch!important;margin-top:14px!important;font:12px/1.4 Arial!important;color:#514943!important}
+.crown-entry .entry-image{background:#8fa19d}
+.crown-entry .entry-image img{width:82%;height:82%;object-fit:contain;filter:drop-shadow(0 26px 24px rgba(34,26,20,.25))}
+.experience[data-work=crown] .art-stage,.experience[data-work=crown] .comparison-stage,.experience[data-work=crown] .discovery-art{background:#d6c9b8}
+.experience[data-work=crown] .art-stage img,.experience[data-work=crown] .comparison-stage img,.experience[data-work=crown] .discovery-art>img{width:78%;height:78%;margin:11%;object-fit:contain;filter:drop-shadow(0 24px 22px rgba(34,26,20,.22))}
+.experience[data-work=crown] .comparison-stage canvas{width:100%;height:100%;margin:0;filter:none}
+.experience[data-work=crown] .h-one{left:43%;top:16%}.experience[data-work=crown] .h-two{left:38%;bottom:29%}.experience[data-work=crown] .h-three{right:32%;top:42%}
+@media(min-width:761px){.prologue-learning{font-size:17px!important;line-height:1.52!important;max-width:54ch}}
+@media(max-width:760px){
+  .institution-link{display:none}
+  .prototype-note{font-size:12px!important;line-height:1.35!important}
+  .experience[data-work=crown]{--frame-w:min(96vw,43vh);--frame-h:min(116vw,52vh)}
+  .experience[data-work=crown] .art-stage img,.experience[data-work=crown] .comparison-stage img,.experience[data-work=crown] .discovery-art>img{width:var(--frame-w)!important;height:var(--frame-h)!important;margin:0!important}
+}
+
 /* The comparison gesture announces its direction before the visitor touches it. */
 .compare-copy>p:after{content:"";display:inline-block;width:64px;height:18px;margin-left:12px;vertical-align:-5px;background:url("data:image/svg+xml,%3Csvg width='64' height='18' viewBox='0 0 64 18' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 9.5C18 8.2 38 10.4 59 9M52 2.5L60 9L52 15.5' fill='none' stroke='%23a83329' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat;animation:slider-direction 1.8s var(--ease) infinite}
 .compare label{position:relative}
@@ -737,4 +754,14 @@ small,.prologue-learning,.art-stage figcaption span{font-size:12px!important}
 @media(max-width:760px){
   .prologue-copy>button{left:7vw!important;right:auto!important;bottom:max(2.7vh,calc(13px + env(safe-area-inset-bottom)))!important;width:210px!important;min-width:0!important;min-height:76px!important;gap:18px!important;padding:13px 16px 12px 20px!important;font-size:clamp(30px,8.4vw,36px)!important;box-shadow:7px 6px 0 rgba(245,235,215,.96)!important}
   .prologue-copy>button i{font-size:30px!important}
+}
+
+/* Final pilot layout: disclosure stays visible and the headdress keeps its real proportions. */
+.format-note{display:none!important}
+.prototype-note{position:fixed;z-index:9;left:6vw;bottom:2.2vh;width:29vw;margin:0!important;padding-top:10px;border-top:1px solid rgba(37,33,29,.35);font:11px/1.35 Arial!important;color:#514943!important}
+.experience[data-work=crown]{--frame-w:min(53vh,42vw);--frame-h:min(75vh,59vw)}
+.experience[data-work=crown] .art-stage img,.experience[data-work=crown] .absence canvas,.experience[data-work=crown] .comparison-stage img,.experience[data-work=crown] .comparison-stage canvas{object-fit:contain!important}
+@media(max-width:760px){
+  .prototype-note{position:static;width:auto;margin-top:14px!important;padding-bottom:16px;font-size:12px!important}
+  .experience[data-work=crown]{--frame-w:min(89vw,42vh);--frame-h:min(126vw,59vh)}
 }
